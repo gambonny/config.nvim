@@ -27,7 +27,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
-vim.opt.laststatus = 3
+opt.laststatus = 3
 
 -- Backspace
 opt.backspace = "indent,eol,start"
@@ -49,6 +49,12 @@ opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
 -- Behaviour
 vim.o.hidden = true
+opt.list = true
+vim.o.swapfile = false
+vim.bo.swapfile = false
+vim.o.backup = false
+vim.o.writebackup = false
+vim.o.autoread = true
 
 vim.cmd [[
   set encoding=utf-8
