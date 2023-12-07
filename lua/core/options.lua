@@ -27,6 +27,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+vim.opt.laststatus = 3
 
 -- Backspace
 opt.backspace = "indent,eol,start"
@@ -46,6 +47,10 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
+-- Behaviour
+vim.o.hidden = true
+
 vim.cmd [[
+  set encoding=utf-8
   let g:better_escape_shortcut = 'jk'
 ]]
