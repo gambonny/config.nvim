@@ -12,6 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Improve startup time
+vim.loader.enable()
+
 -- This has to be set before initializing lazy
 vim.g.mapleader = ";"
 
