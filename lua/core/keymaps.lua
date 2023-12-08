@@ -42,3 +42,6 @@ keymap("n", "<leader>a9", "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", opts
 
 keymap("n", "[a", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
 keymap("n", "]a", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
+
+-- Telescope
+keymap("n", "<C-p>", ":Telescope find_files<cr>", opts)

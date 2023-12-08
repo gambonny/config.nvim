@@ -21,18 +21,28 @@ return {
 
       -- set keybinds
       opts.desc = "Show LSP references"
-
-      opts.desc = "Go to declaration"
-      keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+      keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", opts)
 
       opts.desc = "See available code actions"
       keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+
+      opts.desc = "Show LSP implementations"
+      keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations theme=dropdown<CR>", opts)
+
+      opts.desc = "Show LSP type definitions"
+      keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+
+      opts.desc = "Show buffer diagnostics"
+      keymap.set("n", "<leader>gD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
 
       opts.desc = "Smart rename"
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
       opts.desc = "Show line diagnostics"
-      keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+      keymap.set("n", "<leader>d/", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
+      opts.desc = "Show LSP definitions"
+      keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", opts)
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -92,7 +102,7 @@ return {
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
-     on_attach = on_attach,
+      on_attach = on_attach,
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" },
     })
 
