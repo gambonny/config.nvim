@@ -34,7 +34,7 @@ return {
         "graphql",
         "emmet_ls",
         "pyright",
-        "biome"
+        "biome",
       },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
@@ -42,9 +42,10 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "eslint_d", -- js linter
+        "biome",
+        "prettier",
+        "stylua",
+        "eslint_d",
       },
     })
   end,
