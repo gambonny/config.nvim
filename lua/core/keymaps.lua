@@ -60,15 +60,12 @@ keymap("n", "<leader>tw", ":Telescope whaler<cr>", opts)
 -- Neogit
 keymap("n", "<leader>hh", "<cmd>lua require('neogit').open()<cr>", opts)
 
--- Maximize
-keymap("n", "<leader>mm", "<cmd>lua require('maximize').toggle()<cr>", opts)
-
 -- Portal
 keymap("n", "<leader>oo", "<cmd>Portal jumplist backward<cr>", opts)
 keymap("n", "<leader>oi", "<cmd>Portal jumplist forward<cr>", opts)
 
 -- Outline
-keymap("n", "<leader>os", "<cmd>SymbolsOutline<cr>", opts)
+keymap("n", "<leader>os", "<cmd>Outline!<cr>", opts)
 
 -- Diagnostics
 keymap("n", "<leader>ds", "<cmd>DiagWindowShow<cr>", opts)

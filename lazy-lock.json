@@ -14,6 +14,7 @@
   "diagnostic-window.nvim": { "branch": "main", "commit": "2b4d9618382502740c7945c4023853ee524adc4c" },
   "diffview.nvim": { "branch": "main", "commit": "3dc498c9777fe79156f3d32dddd483b8b3dbd95f" },
   "dressing.nvim": { "branch": "master", "commit": "8b7ae53d7f04f33be3439a441db8071c96092d19" },
+  "dropbar.nvim": { "branch": "master", "commit": "50319e295d80241bee284386ad38781fb3411112" },
   "filetype.nvim": { "branch": "main", "commit": "b522628a45a17d58fc0073ffd64f9dc9530a8027" },
   "flash.nvim": { "branch": "main", "commit": "48817af25f51c0590653bbc290866e4890fe1cbe" },
   "friendly-snippets": { "branch": "main", "commit": "53d3df271d031c405255e99410628c26a8f0d2b0" },
