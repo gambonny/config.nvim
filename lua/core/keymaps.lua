@@ -64,5 +64,8 @@ keymap("n", "<leader>hh", "<cmd>lua require('neogit').open()<cr>", opts)
 keymap("n", "<leader>mm", "<cmd>lua require('maximize').toggle()<cr>", opts)
 
 -- Portal
-vim.keymap.set("n", "<leader>oo", "<cmd>Portal jumplist backward<cr>", opts)
-vim.keymap.set("n", "<leader>oi", "<cmd>Portal jumplist forward<cr>", opts)
+keymap("n", "<leader>oo", "<cmd>Portal jumplist backward<cr>", opts)
+keymap("n", "<leader>oi", "<cmd>Portal jumplist forward<cr>", opts)
+
+-- Outline
+keymap("n", "<leader>os", "<cmd>SymbolsOutline<cr>", opts)
