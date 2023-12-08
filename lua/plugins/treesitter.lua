@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    "RRethy/nvim-treesitter-endwise",
   },
   build = ":TSUpdate",
   opts = {
@@ -10,6 +11,7 @@ return {
       enable = true,
     },
     indent = { enable = true },
+    endwise = { enable = true },
     auto_install = true,
     ensure_installed = {
       "lua",
@@ -19,7 +21,7 @@ return {
       "css",
       "javascript",
       "markdown",
-      "yaml"
+      "yaml",
     },
     textobjects = {
       select = {
@@ -40,8 +42,8 @@ return {
       },
     },
   },
-  config = function (_, opts)
+  config = function(_, opts)
     local configs = require("nvim-treesitter.configs")
     configs.setup(opts)
-  end
+  end,
 }
