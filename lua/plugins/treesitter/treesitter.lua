@@ -24,7 +24,6 @@ return {
     markid = { enable = true },
     endwise = { enable = true },
     autotag = { enable = true },
-    context_commentstring = { enable = true },
     textobjects = {
       select = {
         enable = true,
