@@ -69,3 +69,6 @@ keymap("n", "<leader>oi", "<cmd>Portal jumplist forward<cr>", opts)
 
 -- Outline
 keymap("n", "<leader>os", "<cmd>SymbolsOutline<cr>", opts)
+
+-- Diagnostics
+keymap("n", "<leader>ds", "<cmd>DiagWindowShow<cr>", opts)
