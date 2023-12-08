@@ -5,14 +5,14 @@ local highlight = {
 
 return {
   "lukas-reineke/indent-blankline.nvim",
-  event = 'VeryLazy',
+  event = "VeryLazy",
   main = "ibl",
   opts = {
     enabled = true,
     indent = { highlight = highlight, char = "" },
     whitespace = {
-        highlight = highlight,
-        remove_blankline_trail = false,
+      highlight = highlight,
+      remove_blankline_trail = false,
     },
     scope = { enabled = false },
   },

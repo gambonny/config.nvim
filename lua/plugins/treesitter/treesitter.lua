@@ -21,6 +21,7 @@ return {
     },
     highlight = { enable = true },
     indent = { enable = true },
+    markid = { enable = true },
     endwise = { enable = true },
     autotag = { enable = true },
     context_commentstring = { enable = true },
