@@ -4,14 +4,14 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter-textobjects",
     "RRethy/nvim-treesitter-endwise",
+    "windwp/nvim-ts-autotag",
   },
   build = ":TSUpdate",
   opts = {
-    highlight = {
-      enable = true,
-    },
+    highlight = { enable = true },
     indent = { enable = true },
     endwise = { enable = true },
+    autotag = { enable = true },
     auto_install = true,
     ensure_installed = {
       "lua",
