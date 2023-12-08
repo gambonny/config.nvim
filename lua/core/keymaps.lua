@@ -25,3 +25,20 @@ keymap("n", "<leader>lh", "<cmd>lua require('smart-splits').move_cursor_left()<c
 keymap("n", "<leader>lj", "<cmd>lua require('smart-splits').move_cursor_down()<cr>", opts)
 keymap("n", "<leader>lk", "<cmd>lua require('smart-splits').move_cursor_up()<cr>", opts)
 keymap("n", "<leader>ll", "<cmd>lua require('smart-splits').move_cursor_right()<cr>", opts)
+
+-- Harpoon
+keymap("n", "<leader>aa", "<cmd>lua require('harpoon.mark').add_file()<cr>", opts)
+keymap("n", "<leader>ar", "<cmd>lua require('harpoon.mark').rm_file()<cr>", opts)
+keymap("n", "<leader>ac", "<cmd>lua require('harpoon.mark').clear_all()<cr>", opts)
+keymap("n", "<leader>a1", "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", opts)
+keymap("n", "<leader>a2", "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", opts)
+keymap("n", "<leader>a3", "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", opts)
+keymap("n", "<leader>a4", "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", opts)
+keymap("n", "<leader>a5", "<cmd>lua require('harpoon.ui').nav_file(5)<cr>", opts)
+keymap("n", "<leader>a6", "<cmd>lua require('harpoon.ui').nav_file(6)<cr>", opts)
+keymap("n", "<leader>a7", "<cmd>lua require('harpoon.ui').nav_file(7)<cr>", opts)
+keymap("n", "<leader>a8", "<cmd>lua require('harpoon.ui').nav_file(8)<cr>", opts)
+keymap("n", "<leader>a9", "<cmd>lua require('harpoon.ui').nav_file(9)<cr>", opts)
+
+keymap("n", "[a", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
+keymap("n", "]a", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
