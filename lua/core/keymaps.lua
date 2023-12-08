@@ -52,3 +52,4 @@ keymap("n", "<leader>tr", ":Telescope resume<cr>", opts)
 
 -- Telescope plugins
 keymap("n", "<leader>ta", ":Telescope harpoon marks<cr>", opts)
+keymap("n", "<leader>tl", ":Telescope egrepify<cr>", opts)
