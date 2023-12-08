@@ -8,8 +8,10 @@ return {
   },
   keys = {
     { "<leader>of", ":Neotree toggle filesystem reveal left<cr>" },
-    { "<leader>ob", ":Neotree toggle buffers reveal left<cr>" },
+    { "<leader>ob", ":Neotree float buffers reveal<cr>" },
     { "<leader>oh", ":Neotree toggle git_status reveal left<cr>" },
+    { "<leader>on", ":Neotree toggle git_status git_base=main<cr>" },
+    { "<leader>or", ":Neotree toggle git_status git_base=master<cr>" },
   },
   cmd = "Neotree",
   opts = {
