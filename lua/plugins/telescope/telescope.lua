@@ -51,15 +51,20 @@ return {
           },
         },
       },
+      extensions = {
+        fzf = {
+          override_generic_sorter = false,
+          override_file_sorter = true,
+          case_mode = "smart_case",
+        },
+        whaler = {
+          directories = { "/Users/j.gamba/mindcycle/apps/" },
+          file_explorer = "neotree",
+        },
+        import = {
+          insert_at_top = true,
+        },
+      },
     })
   end,
-  opts = {
-    extensions = {
-      fzf = {
-        override_generic_sorter = false,
-        override_file_sorter = true,
-        case_mode = "smart_case",
-      },
-    },
-  },
 }
