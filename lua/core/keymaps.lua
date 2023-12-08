@@ -59,3 +59,6 @@ keymap("n", "<leader>tw", ":Telescope whaler<cr>", opts)
 
 -- Neogit
 keymap("n", "<leader>hh", "<cmd>lua require('neogit').open()<cr>", opts)
+
+-- Maximize
+keymap("n", "<leader>mm", "<cmd>lua require('maximize').toggle()<cr>", opts)
