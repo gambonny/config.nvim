@@ -14,11 +14,30 @@ return {
     ensure_installed = {
       "lua",
       "typescript",
+      "tsx",
       "html",
       "css",
       "javascript",
       "markdown",
       "yaml"
+    },
+    textobjects = {
+      select = {
+        enable = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+        },
+      },
+      swap = {
+        enable = true,
+        swap_next = {
+          ["<leader>ss"] = "@parameter.inner",
+        },
+        swap_previous = {
+          ["<leader>SS"] = "@parameter.inner",
+        },
+      },
     },
   },
   config = function (_, opts)
