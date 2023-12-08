@@ -47,6 +47,7 @@
   "stickybuf.nvim": { "branch": "master", "commit": "4271bfc6c85dc035eb9e8484954f9179d90e87ab" },
   "telescope-egrepify.nvim": { "branch": "master", "commit": "d65133f68206aa265990f8e35762a959cc2007ef" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6c921ca12321edaa773e324ef64ea301a1d0da62" },
+  "telescope-import.nvim": { "branch": "main", "commit": "62e7023d21cda589a175ef831025c77ffff2ab29" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "d90956833d7c27e73c621a61f20b29fdb7122709" },
   "vim-jsx-pretty": { "branch": "master", "commit": "6989f1663cc03d7da72b5ef1c03f87e6ddb70b41" },
   "vim-lastplace": { "branch": "master", "commit": "aaaf3dc8bbe496c3242a4b4635154ccc9414d357" },

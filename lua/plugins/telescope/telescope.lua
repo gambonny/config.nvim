@@ -52,9 +52,6 @@ return {
         },
       },
     })
-
-    require("telescope").load_extension("harpoon")
-    require("telescope").load_extension("egrepify")
   end,
   opts = {
     extensions = {
