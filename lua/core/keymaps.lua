@@ -56,3 +56,6 @@ keymap("n", "<leader>tl", ":Telescope egrepify<cr>", opts)
 keymap("n", "<leader>ti", ":Telescope import<cr>", opts)
 keymap("n", "<leader>t.", ":Telescope adjacent <cr>", opts)
 keymap("n", "<leader>tw", ":Telescope whaler<cr>", opts)
+
+-- Neogit
+keymap("n", "<leader>hh", "<cmd>lua require('neogit').open()<cr>", opts)
