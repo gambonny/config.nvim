@@ -58,5 +58,4 @@ vim.o.autoread = true
 
 vim.cmd [[
   set encoding=utf-8
-  let g:better_escape_shortcut = 'jk'
 ]]
