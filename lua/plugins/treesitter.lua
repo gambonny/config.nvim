@@ -8,10 +8,6 @@ return {
   },
   build = ":TSUpdate",
   opts = {
-    highlight = { enable = true },
-    indent = { enable = true },
-    endwise = { enable = true },
-    autotag = { enable = true },
     auto_install = true,
     ensure_installed = {
       "lua",
@@ -23,6 +19,10 @@ return {
       "markdown",
       "yaml",
     },
+    highlight = { enable = true },
+    indent = { enable = true },
+    endwise = { enable = true },
+    autotag = { enable = true },
     textobjects = {
       select = {
         enable = true,
@@ -34,10 +34,10 @@ return {
       swap = {
         enable = true,
         swap_next = {
-          ["<leader>ss"] = "@parameter.inner",
+          ["<leader>wn"] = "@parameter.inner",
         },
         swap_previous = {
-          ["<leader>SS"] = "@parameter.inner",
+          ["<leader>wp"] = "@parameter.inner",
         },
       },
     },
