@@ -46,6 +46,9 @@ keymap("n", "]a", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
 
 -- Telescope
 keymap("n", "<C-p>", ":Telescope find_files<cr>", opts)
+keymap("n", "<leader>tg", ":Telescope grep_string<cr>", opts)
+keymap("n", "<leader>ts", ":Telescope git_status<cr>", opts)
+keymap("n", "<leader>tr", ":Telescope resume<cr>", opts)
 
 -- Telescope plugins
 keymap("n", "<leader>ta", ":Telescope harpoon marks<cr>", opts)
