@@ -1,4 +1,5 @@
 local utils = require("utils")
+local ls = require("luasnip").ls
 
 local opts = utils.opts
 local opts_with_desc = utils.opts_with_desc
@@ -116,3 +117,9 @@ keymap("n", "<leader>wo", "<cmd>WindowsMaximize<cr>", opts_with_desc("Toggle max
 keymap("n", "<leader>w=", "<cmd>WindowsEqualize<cr>", opts_with_desc("Equalize windows"))
 keymap("n", "<leader>w|", "<cmd>WindowsMaximizeVertically<cr>", opts_with_desc("Max windows vertically"))
 keymap("n", "<leader>w_", "<cmd>WindowsMaximizeHorizontally<cr>", opts_with_desc("Max windows horizontally"))
+
+-- Luasnip
+keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
+keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
+keymap("i", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
+keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})

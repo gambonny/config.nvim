@@ -1,4 +1,4 @@
-local opts_with_desc = require("utils").opts_with_desc
+local opts = require("utils").opts
 
 return {
   "kwkarlwang/bufresize.nvim",
@@ -6,10 +6,10 @@ return {
     require("bufresize").setup({
       register = {
         keys = {
-          { "n", "<leader>w<", "30<C-w><", opts_with_desc("30 <") },
-          { "n", "<leader>w>", "30<C-w>>", opts_with_desc("30 >") },
-          { "n", "<leader>w-", "10<C-w>-", opts_with_desc("10 <") },
-          { "n", "<leader>w+", "10<C-w>+", opts_with_desc("10 >") },
+          { "n", "<leader>w<", "30<C-w><", opts },
+          { "n", "<leader>w>", "30<C-w>>", opts },
+          { "n", "<leader>w-", "10<C-w>-", opts },
+          { "n", "<leader>w+", "10<C-w>+", opts },
         },
         trigger_events = { "BufWinEnter", "WinEnter" },
       },
