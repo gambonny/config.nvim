@@ -1,5 +1,4 @@
 # Gambonny's Neovim Config
-My Personal Neovim Configuration: Tailored for TypeScript Development.
 
 
 <img width="1470" alt="Screenshot 2023-12-09 at 09 14 58" src="https://github.com/gambonny/config.nvim/assets/88061915/12067d86-681a-4351-beb5-9c8fd7db3546">
