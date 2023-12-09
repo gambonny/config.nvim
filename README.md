@@ -1,4 +1,4 @@
-# config.nvim
+# Gambonny's Neovim Config
 My Personal Neovim Configuration: Tailored for TypeScript Development.
 
 
