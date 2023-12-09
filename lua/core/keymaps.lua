@@ -70,3 +70,10 @@ keymap("n", "<leader>os", "<cmd>Outline!<cr>", opts)
 
 -- Diagnostics
 keymap("n", "<leader>ds", "<cmd>DiagWindowShow<cr>", opts)
+
+--- Go to preview
+keymap("n", "<leader>gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+keymap("n", "<leader>gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", opts)
+keymap("n", "<leader>gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
+keymap("n", "<leader>gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opts)
+keymap("n", "<leader>gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
