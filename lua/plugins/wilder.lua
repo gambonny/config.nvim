@@ -11,6 +11,10 @@ return {
     wilder.set_option(
       "renderer",
       wilder.popupmenu_renderer(wilder.popupmenu_palette_theme({
+        highlighter = wilder.basic_highlighter(),
+        highlights = {
+          accent = wilder.make_hl("WilderAccent", "Pmenu", { { a = 1 }, { a = 1 }, { foreground = "#f4468f" } }),
+        },
         border = "rounded",
         max_width = "50%",
         max_height = "25%", -- max height of the palette
