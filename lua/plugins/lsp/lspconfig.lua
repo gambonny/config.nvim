@@ -21,7 +21,7 @@ return {
 
       -- set keybinds
       opts.desc = "Show LSP references"
-      keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", opts)
+      keymap.set("n", "<leader>gr", "<cmd>TroubleToggle lsp_references<CR>", opts)
 
       opts.desc = "See available code actions"
       keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
@@ -30,10 +30,10 @@ return {
       keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations theme=dropdown<CR>", opts)
 
       opts.desc = "Show LSP type definitions"
-      keymap.set("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
+      keymap.set("n", "<leader>gt", "<cmd>TroubleToggle lsp_type_definitions<CR>", opts)
 
       opts.desc = "Show buffer diagnostics"
-      keymap.set("n", "<leader>gD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
+      keymap.set("n", "<leader>gD", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
 
       opts.desc = "Smart rename"
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
@@ -42,7 +42,7 @@ return {
       keymap.set("n", "<leader>d/", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
       opts.desc = "Show LSP definitions"
-      keymap.set("n", "<leader>gd", "<cmd>Telescope lsp_definitions theme=dropdown<CR>", opts)
+      keymap.set("n", "<leader>gd", "<cmd>TroubleToggle lsp_definitions<CR>", opts)
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer

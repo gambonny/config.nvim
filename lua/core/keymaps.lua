@@ -80,3 +80,10 @@ keymap("n", "<leader>gpt", "<cmd>lua require('goto-preview').goto_preview_type_d
 keymap("n", "<leader>gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
 keymap("n", "<leader>gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opts)
 keymap("n", "<leader>gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
+
+-- Trouble
+keymap("n", "<leader>tt", "<cmd>TroubleToggle<CR>", opts)
+keymap("n", "]q", "<cmd>lua require('trouble').next({skip_groups = true, jump = true})<CR>", opts)
+keymap("n", "[q", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<CR>", opts)
+keymap("n", "[Q", "<cmd>lua require('trouble').first({skip_groups = true, jump = true})<CR>", opts)
+keymap("n", "]Q", "<cmd>lua require('trouble').last({skip_groups = true, jump = true})<CR>", opts)

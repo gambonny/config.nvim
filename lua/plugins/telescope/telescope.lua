@@ -13,6 +13,7 @@ return {
   dependencies = { { "nvim-lua/plenary.nvim" } },
   config = function()
     local actions = require("telescope.actions")
+    local trouble = require("trouble.providers.telescope")
 
     require("telescope").setup({
       defaults = {
@@ -43,11 +44,13 @@ return {
             ["<C-j>"] = actions.move_selection_next,
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-a>"] = actions.cycle_previewers_prev,
+            ["<c-t>"] = trouble.open_with_trouble,
             ["<ESC>"] = actions.close,
           },
           n = {
             ["<C-s>"] = actions.cycle_previewers_next,
             ["<C-a>"] = actions.cycle_previewers_prev,
+            ["<c-t>"] = trouble.open_with_trouble,
           },
         },
       },
