@@ -28,6 +28,7 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.laststatus = 3
+vim.o.cmdheight = 0
 
 -- Backspace
 opt.backspace = "indent,eol,start"
