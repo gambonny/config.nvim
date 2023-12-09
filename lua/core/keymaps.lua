@@ -75,15 +75,31 @@ keymap("n", "<leader>os", "<cmd>Outline!<cr>", opts)
 keymap("n", "<leader>ds", "<cmd>DiagWindowShow<cr>", opts)
 
 --- Go to preview
-keymap("n", "<leader>gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
-keymap("n", "<leader>gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>", opts)
-keymap("n", "<leader>gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
-keymap("n", "<leader>gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>", opts)
-keymap("n", "<leader>gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts)
+keymap("n", "<leader>gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<cr>", opts)
+keymap("n", "<leader>gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<cr>", opts)
+keymap("n", "<leader>gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<cr>", opts)
+keymap("n", "<leader>gpr", "<cmd>lua require('goto-preview').goto_preview_references()<cr>", opts)
+keymap("n", "<leader>gP", "<cmd>lua require('goto-preview').close_all_win()<cr>", opts)
 
 -- Trouble
 keymap("n", "<leader>tt", "<cmd>TroubleToggle<CR>", opts)
-keymap("n", "]q", "<cmd>lua require('trouble').next({skip_groups = true, jump = true})<CR>", opts)
-keymap("n", "[q", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<CR>", opts)
-keymap("n", "[Q", "<cmd>lua require('trouble').first({skip_groups = true, jump = true})<CR>", opts)
-keymap("n", "]Q", "<cmd>lua require('trouble').last({skip_groups = true, jump = true})<CR>", opts)
+keymap("n", "]q", "<cmd>lua require('trouble').next({skip_groups = true, jump = true})<cr>", opts)
+keymap("n", "[q", "<cmd>lua require('trouble').previous({skip_groups = true, jump = true})<cr>", opts)
+keymap("n", "[Q", "<cmd>lua require('trouble').first({skip_groups = true, jump = true})<cr>", opts)
+keymap("n", "]Q", "<cmd>lua require('trouble').last({skip_groups = true, jump = true})<cr>", opts)
+
+-- Windows
+keymap("n", "<leader>wo", "<cmd>WindowsMaximize<cr>", { desc = "Toggle maximize window", table.unpack(opts) })
+keymap("n", "<leader>w=", "<cmd>WindowsEqualize<cr>", { desc = "Equalize windows", table.unpack(opts) })
+keymap(
+  "n",
+  "<leader>w|",
+  "<cmd>WindowsMaximizeVertically<cr>",
+  { desc = "Maximize windows vertically", table.unpack(opts) }
+)
+keymap(
+  "n",
+  "<leader>w_",
+  "<cmd>WindowsMaximizeHorizontally<cr>",
+  { desc = "Maximize windows horizontally", table.unpack(opts) }
+)
