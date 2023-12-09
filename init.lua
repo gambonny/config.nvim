@@ -20,9 +20,15 @@ vim.g.mapleader = ";"
 
 -- Initialize lazy with dynamic loading of anything in the plugins directory
 require("lazy").setup(
-  { { import = "plugins" }, { import = "plugins.treesitter" }, { import = "plugins.lsp" }, {
-    import = "plugins.telescope",
-  } },
+  {
+    { import = "plugins" },
+    { import = "plugins.treesitter" },
+    { import = "plugins.lsp" },
+    {
+      import = "plugins.telescope",
+    },
+    { import = "plugins.mini" },
+  },
   {
     change_detection = {
       enabled = true, -- automatically check for config file changes and reload the ui
