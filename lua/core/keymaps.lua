@@ -118,6 +118,11 @@ keymap("n", "<leader>w=", "<cmd>WindowsEqualize<cr>", opts_with_desc("Equalize w
 keymap("n", "<leader>w|", "<cmd>WindowsMaximizeVertically<cr>", opts_with_desc("Max windows vertically"))
 keymap("n", "<leader>w_", "<cmd>WindowsMaximizeHorizontally<cr>", opts_with_desc("Max windows horizontally"))
 
+keymap("n", "<leader>w<", "30<C-w><", opts_with_desc("30 <"))
+keymap("n", "<leader>w>", "30<C-w>>", opts_with_desc("30 >"))
+keymap("n", "<leader>w-", "10<C-w>-", opts_with_desc("10 -"))
+keymap("n", "<leader>w+", "10<C-w>+", opts_with_desc("10 +"))
+
 -- Luasnip
 keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
 keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
