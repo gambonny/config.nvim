@@ -1,5 +1,4 @@
 local utils = require("utils")
-local ls = require("luasnip").ls
 
 local opts = utils.opts
 local opts_with_desc = utils.opts_with_desc
