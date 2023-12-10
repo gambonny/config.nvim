@@ -127,3 +127,11 @@ keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
 keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
 keymap("i", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
 keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
+
+-- Actions preview
+keymap(
+  "n",
+  "<leader>ca",
+  "<cmd>lua require('actions-preview').code_actions()<cr>",
+  opts_with_desc("See available code actions")
+)

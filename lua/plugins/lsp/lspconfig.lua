@@ -1,3 +1,17 @@
+local diagnostic_opts = {
+  severity = vim.diagnostic.severity.ERROR,
+}
+
+local function next_diagnostic_and_show_actions()
+  vim.diagnostic.goto_next(diagnostic_opts)
+  require("actions-preview").code_actions()
+end
+
+local function prev_diagnostic_and_show_actions()
+  vim.diagnostic.goto_prev(diagnostic_opts)
+  require("actions-preview").code_actions()
+end
+
 return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
@@ -23,9 +37,6 @@ return {
       opts.desc = "Show LSP references"
       keymap.set("n", "<leader>gr", "<cmd>TroubleToggle lsp_references<CR>", opts)
 
-      opts.desc = "See available code actions"
-      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
-
       opts.desc = "Show LSP implementations"
       keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations theme=dropdown<CR>", opts)
 
@@ -44,11 +55,17 @@ return {
       opts.desc = "Show LSP definitions"
       keymap.set("n", "<leader>gd", "<cmd>TroubleToggle lsp_definitions<CR>", opts)
 
+      opts.desc = "Go to previous error"
+      keymap.set("n", "[d", prev_diagnostic_and_show_actions, opts)
+
+      opts.desc = "Go to next error"
+      keymap.set("n", "]d", next_diagnostic_and_show_actions, opts)
+
       opts.desc = "Go to previous diagnostic"
-      keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+      keymap.set("n", "[D", vim.diagnostic.goto_prev, opts)
 
       opts.desc = "Go to next diagnostic"
-      keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+      keymap.set("n", "]D", vim.diagnostic.goto_next, opts)
 
       opts.desc = "Show documentation for what is under cursor"
       keymap.set("n", "K", vim.lsp.buf.hover, opts)
