@@ -10,6 +10,7 @@ local git_icons = {
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = { { "nvim-lua/plenary.nvim" } },
+  tag = "0.1.3",
   config = function()
     local actions = require("telescope.actions")
     local trouble = require("trouble.providers.telescope")
