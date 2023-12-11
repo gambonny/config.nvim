@@ -2,14 +2,12 @@ local diagnostic_opts = {
   severity = vim.diagnostic.severity.ERROR,
 }
 
-local function next_diagnostic_and_show_actions()
+local function next_error()
   vim.diagnostic.goto_next(diagnostic_opts)
-  require("actions-preview").code_actions()
 end
 
-local function prev_diagnostic_and_show_actions()
+local function prev_error()
   vim.diagnostic.goto_prev(diagnostic_opts)
-  require("actions-preview").code_actions()
 end
 
 return {
@@ -56,10 +54,10 @@ return {
       keymap.set("n", "<leader>gd", "<cmd>TroubleToggle lsp_definitions<CR>", opts)
 
       opts.desc = "Go to previous error"
-      keymap.set("n", "[d", prev_diagnostic_and_show_actions, opts)
+      keymap.set("n", "[d", prev_error, opts)
 
       opts.desc = "Go to next error"
-      keymap.set("n", "]d", next_diagnostic_and_show_actions, opts)
+      keymap.set("n", "]d", next_error, opts)
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[D", vim.diagnostic.goto_prev, opts)

@@ -4,8 +4,6 @@ local opts = utils.opts
 local opts_with_desc = utils.opts_with_desc
 local keymap = vim.api.nvim_set_keymap
 
-vim.g.mapleader = ";"
-
 -- General keymaps
 keymap("n", "<leader>ww", "<cmd>update<cr>", opts_with_desc("Update"))
 keymap("n", "<leader>xx", "<cmd>x<cr>", opts_with_desc("x"))
@@ -131,7 +129,7 @@ keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
 -- Actions preview
 keymap(
   "n",
-  "<leader>ca",
+  "<leader>..",
   "<cmd>lua require('actions-preview').code_actions()<cr>",
   opts_with_desc("See available code actions")
 )
