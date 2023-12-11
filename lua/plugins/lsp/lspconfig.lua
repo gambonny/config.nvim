@@ -35,6 +35,9 @@ return {
       opts.desc = "Show LSP references"
       keymap.set("n", "<leader>gr", "<cmd>TroubleToggle lsp_references<CR>", opts)
 
+      opts.desc = "See available code actions"
+      keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+
       opts.desc = "Show LSP implementations"
       keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations theme=dropdown<CR>", opts)
 
