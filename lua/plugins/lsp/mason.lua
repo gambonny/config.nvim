@@ -37,6 +37,7 @@ return {
       ensure_installed = {
         "biome",
         "prettier",
+        "prettierd",
         "stylua",
         "eslint_d",
       },

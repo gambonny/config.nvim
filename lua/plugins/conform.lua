@@ -7,16 +7,16 @@ return {
 
     conform.setup({
       formatters_by_ft = {
-        javascript = {{ "biome", "prettier" }},
-        typescript = {{ "biome", "prettier" }},
-        javascriptreact = {{ "biome", "prettier" }},
-        typescriptreact = {{ "biome", "prettier" }},
-        css = { "prettier" },
-        html = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-        graphql = { "prettier" },
+        javascript = { "prettierd" },
+        typescript = { "prettierd" },
+        javascriptreact = { "prettierd" },
+        typescriptreact = { "prettierd" },
+        css = { "prettierd" },
+        html = { "prettierd" },
+        json = { "prettierd" },
+        yaml = { "prettierd" },
+        markdown = { "prettierd" },
+        graphql = { "prettierd" },
         lua = { "stylua" },
       },
       format_on_save = {
