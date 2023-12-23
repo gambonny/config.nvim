@@ -121,7 +121,7 @@ keymap("n", "<leader>w-", "10<C-w>-", opts_with_desc("10 -"))
 keymap("n", "<leader>w+", "10<C-w>+", opts_with_desc("10 +"))
 
 -- Luasnip
-keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
-keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", {})
-keymap("i", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
-keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", {})
+keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", opts)
+keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", opts)
+keymap("i", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", opts)
+keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", opts)
