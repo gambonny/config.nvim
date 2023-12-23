@@ -26,7 +26,6 @@ return {
         "cssls",
         "lua_ls",
         "graphql",
-        "emmet_ls",
         "pyright",
         "biome",
       },
