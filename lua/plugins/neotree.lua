@@ -24,5 +24,10 @@ return {
         },
       },
     })
+
+    require("neo-tree.command").execute({
+      action = "show",
+      reveal_force_cwd = true,
+    })
   end,
 }
