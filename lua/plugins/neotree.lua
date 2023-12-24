@@ -13,12 +13,16 @@ return {
     { "<leader>on", ":Neotree toggle git_status git_base=main<cr>" },
     { "<leader>or", ":Neotree toggle git_status git_base=master<cr>" },
   },
-  cmd = "Neotree",
-  opts = {
-    filesystem = {
-      filtered_items = {
-        visible = true,
+  config = function()
+    require("neo-tree").setup({
+      filesystem = {
+        filtered_items = {
+          visible = true,
+        },
+        follow_current_file = {
+          enabled = true,
+        },
       },
-    },
-  },
+    })
+  end,
 }
