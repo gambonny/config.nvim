@@ -28,6 +28,7 @@ return {
         "graphql",
         "pyright",
         "biome",
+        "astro-language-server",
       },
       automatic_installation = true,
     })

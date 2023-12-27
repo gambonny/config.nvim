@@ -61,7 +61,11 @@ return {
           case_mode = "smart_case",
         },
         whaler = {
-          directories = { "/Users/j.gamba/mindcycle/apps/" },
+          directories = {
+            "/Users/j.gamba/mindcycle/apps/",
+            "/Users/j.gamba/dev/personal/gambonny/apps/",
+            "/Users/j.gamba/dev/personal/gambonny/packages/",
+          },
           file_explorer = "neotree",
         },
         import = {

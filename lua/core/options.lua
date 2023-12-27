@@ -68,3 +68,9 @@ vim.cmd([[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank({timeout=175})
   augroup END
 ]])
+
+vim.filetype.add({
+  extension = {
+    astro = "astro",
+  },
+})
