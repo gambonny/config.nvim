@@ -30,6 +30,13 @@ return {
     f(get_component_name),
     t(";"),
   }),
+  s({ trig = ",,", snippetType = "autosnippet" }, {
+    t("("),
+    i(1),
+    t(") => {"),
+    i(0),
+    t("}"),
+  }, { hidden = true }),
   postfix({ trig = ".log", snippetType = "autosnippet" }, {
     t("console.log('"),
     f(getPostfixMatch, {}),
