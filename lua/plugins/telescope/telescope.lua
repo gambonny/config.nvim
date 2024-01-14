@@ -62,9 +62,11 @@ return {
         },
         whaler = {
           directories = {
-            "/Users/j.gamba/mindcycle/apps/",
-            "/Users/j.gamba/dev/personal/gambonny/apps/",
-            "/Users/j.gamba/dev/personal/gambonny/packages/",
+            { path = "~/dev/personal/gambonny/", alias = "Gambonny" },
+            { path = "~/dev/dh/plugins/vendor-growth-web-mfes/packages/", alias = "OneWeb Plugins" },
+          },
+          oneoff_directories = {
+            { path = "~/dev/dh/plugins/ump/current/", alias = "UMP plugin" },
           },
           file_explorer = "neotree",
         },
