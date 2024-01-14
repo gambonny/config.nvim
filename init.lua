@@ -44,3 +44,10 @@ vim.cmd([[
 -- These modules are not loaded by lazy
 require("core.options")
 require("core.keymaps")
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    vim.wo.number = true
+  end,
+})

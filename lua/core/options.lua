@@ -4,7 +4,8 @@ local opt = vim.opt
 opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Line Numbers
-opt.number = true
+vim.wo.number = true
+vim.o.number = true
 
 -- Tabs & Indentation
 opt.tabstop = 2
