@@ -27,15 +27,13 @@ return {
         "lua_ls",
         "graphql",
         "pyright",
-        "biome",
-        "astro-language-server",
+        "astro",
       },
       automatic_installation = true,
     })
 
     mason_tool_installer.setup({
       ensure_installed = {
-        "biome",
         "prettier",
         "prettierd",
         "stylua",
