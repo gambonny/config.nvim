@@ -7,6 +7,7 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = {
+    { "<leader>'", ":Neotree toggle filesystem reveal left<cr>" },
     { "<leader>[", ":Neotree toggle filesystem reveal left<cr>" },
     { "<leader>]", ":Neotree toggle filesystem reveal left<cr>" },
     { "<leader>ob", ":Neotree float buffers reveal<cr>" },

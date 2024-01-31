@@ -8,7 +8,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "<leader>ww", "<cmd>update<cr>", opts_with_desc("Update"))
 keymap("n", "<leader>xx", "<cmd>x<cr>", opts_with_desc("x"))
 keymap("n", "<leader>qq", "<cmd>q!<cr>", opts_with_desc("Close buffer w/o save"))
-keymap("n", "<leader><Space>", "<cmd>q!<cr>", opts_with_desc("Close buffer w/o save"))
+keymap("n", "<leader><Space>", "<cmd>bd!<cr>", opts_with_desc("Close buffer w/o save"))
 keymap("n", "<leader>qt", "<cmd>tabclose!<cr>", opts_with_desc("Close tab w/o save"))
 keymap("n", "<leader>qQ", "<cmd>qall!<cr>", opts_with_desc("Close editor w/o save"))
 keymap("n", "<leader>vi", ":e ~/.config/nvim/init.lua<cr>", opts)
@@ -53,14 +53,14 @@ keymap("n", "]a", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
 -- Telescope
 keymap("n", "<C-p>", ":Telescope find_files<cr>", opts_with_desc("Ts find files"))
 keymap("n", "<leader>tg", ":Telescope grep_string<cr>", opts_with_desc("Ts grep string"))
-keymap("n", "<leader>ts", ":Telescope git_status<cr>", opts_with_desc("Ts git status"))
+keymap("n", "<leader><leader>,", ":Telescope git_status<cr>", opts_with_desc("Ts git status"))
 keymap("n", "<leader>tr", ":Telescope resume<cr>", opts_with_desc("Ts resume"))
 
 -- Telescope plugins
-keymap("n", "<leader>ta", ":Telescope harpoon marks<cr>", opts_with_desc("Ts harpoon"))
 keymap("n", "<leader>tl", ":Telescope egrepify<cr>", opts_with_desc("Ts egrepify"))
 keymap("n", "<leader>ti", ":Telescope import<cr>", opts_with_desc("Ts import"))
-keymap("n", "<leader>t.", ":Telescope adjacent <cr>", opts_with_desc("Ts adjacent"))
+keymap("n", "<leader><leader>/", ":Telescope harpoon marks<cr>", opts_with_desc("Ts harpoon"))
+keymap("n", "<leader><leader>.", ":Telescope adjacent <cr>", opts_with_desc("Ts adjacent"))
 keymap("n", "<leader>tw", ":Telescope whaler<cr>", opts_with_desc("Ts whaler"))
 
 -- Neogit
