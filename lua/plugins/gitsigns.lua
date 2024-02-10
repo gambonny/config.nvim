@@ -3,7 +3,9 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     require("gitsigns").setup({
-      require("scrollbar.handlers.gitsigns").setup(),
+      require("scrollbar.handlers.gitsigns").setup({
+        trouble = true,
+      }),
       on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
 
