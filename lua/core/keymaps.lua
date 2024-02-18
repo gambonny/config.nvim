@@ -126,3 +126,8 @@ keymap("i", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", opts)
 keymap("n", "<A-d>", "<cmd>lua require('luasnip').jump(1)<cr>", opts)
 keymap("i", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", opts)
 keymap("n", "<A-p>", "<cmd>lua require('luasnip').jump(-1)<cr>", opts)
+
+-- Open in GitHub
+keymap("n", "<leader>ogr", "<cmd>OpenInGHRepo<cr>", opts)
+keymap("n", "<leader>ogf", "<cmd>OpenInGHFile<cr>", opts)
+keymap("n", "<leader>ogp", "<cmd>OpenInGHPullRequest<cr>", opts)
