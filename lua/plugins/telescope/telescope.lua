@@ -61,14 +61,16 @@ return {
           case_mode = "smart_case",
         },
         whaler = {
-          directories = {
-            { path = "~/dev/personal/gambonny/", alias = "Gambonny" },
-            { path = "~/dev/dh/plugins/vendor-growth-web-mfes/packages/", alias = "OneWeb Plugins" },
-          },
           oneoff_directories = {
-            { path = "~/dev/dh/plugins/ump/current/", alias = "UMP plugin" },
+            { path = "~/dev/dh/plugins/current/dashboard/js/dashboard/", alias = "vri-dashboard" },
+            { path = "~/dev/dh/plugins/current/rats_revs/js/reviews/", alias = "vri-rat_revs" },
+            { path = "~/dev/dh/plugins/current/trends/js/trends/frontend/", alias = "vri-trends" },
+            { path = "~/dev/dh/plugins/current/orders/js/orders/", alias = "vri-orders" },
+            { path = "~/dev/dh/plugins/current/finance/js/finance/", alias = "vri-finance" },
           },
           file_explorer = "neotree",
+          auto_file_explorer = true,
+          auto_cwd = true,
         },
         import = {
           insert_at_top = true,

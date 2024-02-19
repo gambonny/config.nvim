@@ -61,7 +61,23 @@ keymap("n", "<leader>tl", ":Telescope egrepify<cr>", opts_with_desc("Ts egrepify
 keymap("n", "<leader>ti", ":Telescope import<cr>", opts_with_desc("Ts import"))
 keymap("n", "<leader><leader>/", ":Telescope harpoon marks<cr>", opts_with_desc("Ts harpoon"))
 keymap("n", "<leader><leader>.", ":Telescope adjacent <cr>", opts_with_desc("Ts adjacent"))
-keymap("n", "<leader>tw", ":Telescope whaler<cr>", opts_with_desc("Ts whaler"))
+keymap("n", "<leader>tw-", ":Telescope whaler<cr>", opts_with_desc("Ts whaler"))
+
+vim.keymap.set("n", "<leader>tw_", function()
+  local w = require("telescope").extensions.whaler.whaler
+  w({
+    auto_file_explorer = true,
+    auto_cwd = false,
+    file_explorer_config = {
+      plugin_name = "telescope",
+      command = "Telescope find_files",
+      prefix_dir = " cwd=",
+    },
+    theme = {
+      previewer = false,
+    },
+  })
+end)
 
 -- Neogit
 keymap("n", "<leader>hh", "<cmd>lua require('neogit').open()<cr>", opts_with_desc("Neogit"))
