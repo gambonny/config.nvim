@@ -31,7 +31,7 @@ return {
     })
     vim.cmd([[
       set background=dark
-      colorscheme rose-pine
+      colorscheme rose-pine-moon
     ]])
   end,
 }
