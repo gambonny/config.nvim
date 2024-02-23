@@ -4,6 +4,11 @@
       "name": "copy all",
       "raw": "Y3BnRw==",
       "content": "cpgG"
+    },
+    {
+      "name": "Delete prev",
+      "raw": "W247IDsg",
+      "content": "[n;<Space>"
     }
   ]
 }
