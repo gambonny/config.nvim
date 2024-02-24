@@ -54,7 +54,7 @@ return {
       keymap.set("n", "<leader>d/", vim.diagnostic.open_float, opts)
 
       opts.desc = "Show LSP definitions"
-      keymap.set("n", "<leader>gd", "<cmd>TroubleToggle lsp_definitions<CR>", opts)
+      keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
 
       opts.desc = "Go to previous error"
       keymap.set("n", "[d", prev_error, opts)
