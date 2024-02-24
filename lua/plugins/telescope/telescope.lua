@@ -77,5 +77,32 @@ return {
         },
       },
     })
+
+    local previewers = require("telescope.previewers")
+    local pickers = require("telescope.pickers")
+    local finders = require("telescope.finders")
+    local sorters = require("telescope.sorters")
+    local changed_on_branch = function()
+      pickers
+        .new({
+          results_title = "Modified on current branch",
+          finder = finders.new_oneshot_job({
+            "git",
+            "diff",
+            "--name-only",
+            "--relative",
+            "master",
+          }),
+          sorter = sorters.get_fuzzy_file(),
+          previewer = previewers.new_termopen_previewer({
+            get_command = function(entry)
+              return { "git", "diff", "--relative", "master", entry.value }
+            end,
+          }),
+        })
+        :find()
+    end
+
+    vim.api.nvim_create_user_command("MB", changed_on_branch, {})
   end,
 }

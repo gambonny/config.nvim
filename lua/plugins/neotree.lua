@@ -12,8 +12,6 @@ return {
     { "<leader>]", ":Neotree toggle filesystem reveal left<cr>" },
     { "<leader>ob", ":Neotree buffers reveal float<cr>" },
     { "<leader>ol", ":Neotree toggle git_status reveal float<cr>" },
-    { "<leader>om", ":Neotree toggle git_status git_base=main reveal left<cr>" },
-    { "<leader>on", ":Neotree toggle git_status git_base=main<cr>" },
     { "<leader>or", ":Neotree toggle git_status git_base=master<cr>" },
   },
   config = function()

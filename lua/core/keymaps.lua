@@ -20,7 +20,6 @@ keymap("n", "]t", "<cmd>tabnext<cr>", opts)
 
 -- Gitsigns
 keymap("n", "<leader>chr", ":Gitsigns change_base master global async<cr>", opts_with_desc("Change base to master"))
-keymap("n", "<leader>chn", ":Gitsigns change_base main global async<cr>", opts_with_desc("Change base to main"))
 keymap("n", "<leader>chs", ":Gitsigns change_base nil true async<cr>", opts_with_desc("Reset base"))
 
 -- Smart splits
@@ -57,6 +56,7 @@ keymap("n", "<C-p>", ":Telescope find_files<cr>", opts_with_desc("Ts find files"
 keymap("n", "<leader>tg", ":Telescope grep_string<cr>", opts_with_desc("Ts grep string"))
 keymap("n", "<leader><leader>,", ":Telescope git_status<cr>", opts_with_desc("Ts git status"))
 keymap("n", "<leader>tr", ":Telescope resume<cr>", opts_with_desc("Ts resume"))
+keymap("n", "<leader>tb", ":MB<cr>", opts_with_desc("Modified in current branch"))
 
 -- Telescope plugins
 keymap("n", "<leader>tl", ":Telescope egrepify<cr>", opts_with_desc("Ts egrepify"))
