@@ -6,12 +6,13 @@ return {
     local eslint = require("efmls-configs.linters.eslint")
     local languages = {
       typescript = { eslint },
+      javascript = { eslint },
     }
 
     local efmls_config = {
       filetypes = vim.tbl_keys(languages),
       settings = {
-        rootMarkers = { ".git/", "../../.git" },
+        rootMarkers = { "eslint.config.js" },
         languages = languages,
       },
       init_options = {
