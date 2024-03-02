@@ -6,15 +6,21 @@ return {
   },
   opts = {
     sections = {
+      lualine_b = {
+        {
+          require("grapple").statusline,
+          cond = require("grapple").exists,
+        },
+      },
       lualine_c = {
         {
           "filename",
-          file_status = true, -- Displays file status (readonly status, modified status)
-          newfile_status = false, -- Display new file status (new file means no write after created)
+          file_status = true,
+          newfile_status = false,
           path = 4,
           symbols = {
-            modified = "[+]", -- Text to show when the file is modified.
-            readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
+            modified = "[+]",
+            readonly = "[-]",
           },
         },
       },

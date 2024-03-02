@@ -44,7 +44,7 @@ return {
       keymap.set("n", "<leader>gi", "<cmd>Telescope lsp_implementations theme=dropdown<CR>", opts)
 
       opts.desc = "Show LSP type definitions"
-      keymap.set("n", "<leader>gt", "<cmd>TroubleToggle lsp_type_definitions<CR>", opts)
+      keymap.set("n", "<leader>gT", "<cmd>TroubleToggle lsp_type_definitions<CR>", opts)
 
       opts.desc = "Show buffer diagnostics"
       keymap.set("n", "<leader>gD", "<cmd>TroubleToggle document_diagnostics<CR>", opts)

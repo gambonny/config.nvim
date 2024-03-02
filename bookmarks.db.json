@@ -1,1 +1,1 @@
-[]
+[{"id": "2024030208510519696880", "name": "Default", "is_active": true, "bookmarks": [{"created_at": 1709365865, "id": 1709365865, "name": "", "location": {"col": 0, "path": "/Users/j.gamba/gambonny/libraries/svamba/package.json", "line": 2}, "githash": "05a9b84", "visited_at": 1709365865, "content": "  \"name\": \"svamba\","}]}]
