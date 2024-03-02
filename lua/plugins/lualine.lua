@@ -5,9 +5,6 @@ return {
     "linrongbin16/lsp-progress.nvim", -- LSP loading progress
   },
   opts = {
-    options = {
-      theme = "tokyonight",
-    },
     sections = {
       lualine_c = {
         {
