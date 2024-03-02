@@ -150,6 +150,7 @@ keymap("n", "<leader>ogr", "<cmd>OpenInGHRepo<cr>", opts_with_desc("Open repo GH
 keymap("n", "<leader>ogf", "<cmd>OpenInGHFile<cr>", opts_with_desc("Open file GH"))
 keymap("n", "<leader>ogp", "<cmd>OpenInGHPullRequest<cr>", opts_with_desc("Open PR in GH"))
 
+-- Bookmarks
 keymap("n", "<leader>mm", "<cmd>BookmarksMark<cr>", opts_with_desc("Mark current line into active BookmarkList"))
 keymap("n", "<leader>mo", "<cmd>BookmarksGoto<cr>", opts_with_desc("Go to bookmark at current active BookmarkList"))
 keymap("n", "<leader>ma", "<cmd>BookmarksCommands<cr>", opts_with_desc("Find and trigger a bookmark command"))
