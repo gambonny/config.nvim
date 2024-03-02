@@ -1,3 +1,5 @@
+require("lspconfig").biome.setup({})
+
 local diagnostic_opts = {
   severity = vim.diagnostic.severity.ERROR,
 }
@@ -99,7 +101,7 @@ return {
       on_attach = on_attach,
     })
 
-    -- lspconfig["biome"].setup({
+    -- lspconfig["biomejs"].setup({
     --   capabilities = capabilities,
     --   on_attach = on_attach,
     -- })
@@ -113,19 +115,6 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-    })
-
-    lspconfig["emmet_ls"].setup({
-      capabilities = vim.tbl_deep_extend("keep", capabilities, {
-        textDocument = {
-          completion = {
-            completionItem = {
-              snippetSupport = true,
-            },
-          },
-        },
-      }),
-      on_attach = on_attach,
     })
 
     lspconfig["lua_ls"].setup({
