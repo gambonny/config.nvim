@@ -1,3 +1,45 @@
+local uncommitted_files = {}
+local current_file_index = 1
+
+local function update_uncommitted_files()
+  local handle = io.popen("git ls-files --modified --others --exclude-standard")
+  local result = handle:read("*a")
+  handle:close()
+
+  uncommitted_files = {}
+  for file in result:gmatch("[^\r\n]+") do
+    table.insert(uncommitted_files, file)
+  end
+  current_file_index = 1
+end
+
+local function next_uncommitted_file()
+  if #uncommitted_files == 0 then
+    update_uncommitted_files()
+  end
+  if #uncommitted_files > 0 then
+    current_file_index = current_file_index % #uncommitted_files + 1
+    vim.cmd("edit " .. uncommitted_files[current_file_index])
+  else
+    print("No uncommitted files found.")
+  end
+end
+
+local function prev_uncommitted_file()
+  if #uncommitted_files == 0 then
+    update_uncommitted_files()
+  end
+  if #uncommitted_files > 0 then
+    current_file_index = (current_file_index - 2) % #uncommitted_files + 1
+    vim.cmd("edit " .. uncommitted_files[current_file_index])
+  else
+    print("No uncommitted files found.")
+  end
+end
+
+vim.keymap.set("n", "]H", next_uncommitted_file, { noremap = true, silent = true })
+vim.keymap.set("n", "[H", prev_uncommitted_file, { noremap = true, silent = true })
+
 return {
   "lewis6991/gitsigns.nvim",
   event = { "BufReadPre", "BufNewFile" },
