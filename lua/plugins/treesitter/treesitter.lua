@@ -18,7 +18,6 @@ return {
       "javascript",
       "markdown",
       "yaml",
-      "astro",
     },
     highlight = { enable = true },
     indent = { enable = true },

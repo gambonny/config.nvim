@@ -27,7 +27,6 @@ return {
         "lua_ls",
         "graphql",
         "pyright",
-        "astro",
       },
       automatic_installation = true,
     })

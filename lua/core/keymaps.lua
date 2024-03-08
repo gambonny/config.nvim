@@ -154,3 +154,16 @@ keymap("n", "<leader>ogp", "<cmd>OpenInGHPullRequest<cr>", opts_with_desc("Open 
 keymap("n", "<leader>mm", "<cmd>BookmarksMark<cr>", opts_with_desc("Mark current line into active BookmarkList"))
 keymap("n", "<leader>mo", "<cmd>BookmarksGoto<cr>", opts_with_desc("Go to bookmark at current active BookmarkList"))
 keymap("n", "<leader>ma", "<cmd>BookmarksCommands<cr>", opts_with_desc("Find and trigger a bookmark command"))
+
+-- Grapple
+vim.keymap.set("n", "<leader>ga", require("grapple").toggle)
+vim.keymap.set("n", "<leader>gt", require("grapple").toggle_tags)
+vim.keymap.set("n", "<leader>gs", require("grapple").toggle_scopes)
+vim.keymap.set("n", "<leader>gl", require("grapple").toggle_loaded)
+
+keymap("n", "]g", "<cmd>Grapple cycle forward scope=cwd<cr>", opts_with_desc("Grapple cycle forward"))
+keymap("n", "[g", "<cmd>Grapple cycle backward scope=cwd<cr>", opts_with_desc("Grapple cycle backward"))
+
+-- Todo-Comments
+keymap("n", "<leader>t_q", "<cmd>TodoQuickFix<cr>", opts_with_desc("Todo QuickFix"))
+keymap("n", "<leader>t_t", "<cmd>TodoTelescope<cr>", opts_with_desc("Todo Telescope"))

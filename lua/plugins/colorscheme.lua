@@ -27,6 +27,9 @@ return {
         FlashMatch = { fg = "pine", bg = "iris", bold = true },
         FlashCurrent = { fg = "iris", bg = "love", underline = true },
         FlashLabel = { fg = "pine", bg = "gold", bold = true },
+        MarkSignHL = { fg = "iris", bg = "base" },
+        MarkSignNumHL = { fg = "iris", bg = "base" },
+        MarkVirtTextHL = { fg = "iris", bg = "base" },
       },
     })
     vim.cmd([[

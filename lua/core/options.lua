@@ -60,6 +60,7 @@ vim.o.autoread = true
 
 vim.cmd([[
   set encoding=utf-8
+  set t_Co=256
 ]])
 
 -- This autocommand group sets up automatic highlighting of text whenever it is yanked (copied).
@@ -69,9 +70,3 @@ vim.cmd([[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank({timeout=175})
   augroup END
 ]])
-
-vim.filetype.add({
-  extension = {
-    astro = "astro",
-  },
-})
